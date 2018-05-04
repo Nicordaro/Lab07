@@ -5,8 +5,6 @@ package it.polito.tdp.poweroutages;
  */
 
 import java.net.URL;
-import java.time.Duration;
-import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -52,9 +50,6 @@ public class PowerOutagesController {
 		years = Integer.parseInt(yearArea.getText());
 		hours = Integer.parseInt(hoursArea.getText());
 
-		Period p = Period.ofYears(years);
-		Duration d = Duration.ofHours(hours);
-
 		Nerc n = choiceBox.getValue();
 
 		// Debug
@@ -64,7 +59,10 @@ public class PowerOutagesController {
 		//
 		//
 		// }
-		String s = m.testpodao(n).toString().replaceAll("[.,\\/#!$%\\^&\\*;{}=\\_`~()\\[\\]\"]", "");
+
+		String s = m.calcolaSequenza(n, years, hours).toString();
+		// .replaceAll("[.,\\/#!$%\\^&\\*;{}=\\_`~()\\[\\]\"]",
+		// "");
 		resultArea.setText(" " + s);
 
 	}
