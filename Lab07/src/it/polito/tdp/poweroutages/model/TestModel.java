@@ -7,10 +7,9 @@ public class TestModel {
 		Model model = new Model();
 		// System.out.println(model.getNercList());
 
-		for (Nerc n : model.getNercList()) {
-			for (Outages o : model.testpodao(n)) {
-				o.toString();
-			}
-		}
+		// for (Nerc n : model.getNercList()) {
+		// System.out.println(model.testpodao(n) + " " + n.getId());
+		// }
+		// }
 	}
 }

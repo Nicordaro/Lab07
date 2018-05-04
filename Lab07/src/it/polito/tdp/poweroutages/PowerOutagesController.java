@@ -58,12 +58,14 @@ public class PowerOutagesController {
 		Nerc n = choiceBox.getValue();
 
 		// Debug
-		resultArea.setText("" + p + " " + d + " " + n.getId());
+		// resultArea.setText("" + p + " " + d + " " + n.getId());
 		//
 		// if (years > 0 && hours > 0) {
 		//
 		//
 		// }
+		String s = m.testpodao(n).toString().replaceAll("[.,\\/#!$%\\^&\\*;{}=\\_`~()\\[\\]\"]", "");
+		resultArea.setText(" " + s);
 
 	}
 

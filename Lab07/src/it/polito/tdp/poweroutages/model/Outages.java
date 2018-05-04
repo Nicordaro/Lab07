@@ -98,7 +98,7 @@ public class Outages {
 
 	@Override
 	public String toString() {
-		return "" + anno + " " + inizio + " " + fine + " " + tag_id + " " + persone + "\n";
+		return anno + " " + inizio + " " + fine + " " + tag_id + " " + persone + "\n";
 	}
 
 }
